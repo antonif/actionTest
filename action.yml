@@ -1,7 +1,11 @@
-name: ActionCommitCheck
+name: ActionCommitCheck.CI
 
 on: [pull-request, push]
 
 jobs:
-  check:
-    steps:
+  check-commit-message:
+    name: Check Commit Message
+    runs-on: ubuntu-latest
+      steps:
+        - name: Check Commit Email
+          uses: 
