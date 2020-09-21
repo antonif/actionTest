@@ -1,1 +1,7 @@
+name: ActionCommitCheck
 
+on: [pull-request, push]
+
+jobs:
+  check:
+    steps:
