@@ -14,5 +14,10 @@ jobs:
     name: Check Commit Message
     runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v1                               #Ezek kellenek az action-höz-------------------
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v1
+          with:
+            node-version: ${{ matrix.node-version }}              #----------------------------------------------
         - name: Check Commit Email
           uses: 
