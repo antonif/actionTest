@@ -33,4 +33,8 @@ jobs:
           echo checking email...
       
       - name: Check commit message
-        uses: 
+        with:
+          author: user.name
+          email: user.email
+          run: git commit
+          if: user.email 
