@@ -19,7 +19,7 @@ jobs:
       - name: Check Commiter's Email
         uses: gsactions/commit-message-checker@v1
         with:
-          pattern: '([a-z]+([.]|[0-9]+)?)+(.p92)?@(sonymusic.com|bct14.de)'
+          pattern: '([a-z]+([.]|[0-9]+)?)+(\.p92)?@(sonymusic\.com|bct14\.de)'
           flags: 'gm'         #g: global ; m: multiline; i: ignore case
           error: 'Your address is not valid.(*@sonymusic.com)'
       - name: Check RPS/GRA
