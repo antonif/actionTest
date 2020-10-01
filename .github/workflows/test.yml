@@ -19,13 +19,13 @@ jobs:
       - name: Check Commiter's Email
         uses: gsactions/commit-message-checker@v1
         with:
-          pattern: '(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@sonymusic.com'
+          pattern: '([a-z]+([.]|[0-9]+)?)+(.p92)?@(sonymusic.com|bct14.de)'
           flags: 'gm'         #g: global ; m: multiline; i: ignore case
           error: 'Your address is not valid.(*@sonymusic.com)'
-      - name: Check Line Length
+      - name: Check RPS/GRA
         uses: gsactions/commit-message-checker@v1
         with:
-          pattern: '^[^#].{74}'
+          pattern: '^(GRA|RPS)-\d+'
           error: 'The maximum line length of 74 characters is exceeded.'
           excludeDescription: 'true' # optional: this excludes the description body of a pull request
           excludeTitle: 'true' # optional: this excludes the title of a pull request
